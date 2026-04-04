@@ -1,0 +1,30 @@
+{
+  "name": "xanix",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/TinaKovalova/xanix#readme",
+  "bugs": {
+    "url": "https://github.com/TinaKovalova/xanix/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TinaKovalova/xanix.git"
+  },
+  "license": "ISC",
+  "author": "Tina Kovalova",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "postcss": "^8.5.8",
+    "postcss-pxtorem": "^6.1.0",
+    "sass-embedded": "^1.99.0",
+    "sharp": "^0.34.5",
+    "vite": "^8.0.3",
+    "vite-plugin-webp-and-path": "^0.1.4"
+  }
+}
