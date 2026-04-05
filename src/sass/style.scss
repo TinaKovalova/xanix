@@ -8,12 +8,15 @@
 
 html {
     scroll-behavior: smooth;
-    color: #ffffff;
-    background-color: #000000;
 }
 
 body {
     font-family: "Outfit", sans-serif;
+    color: #ffffff;
+    background-color: #000000;
+    &:has(.opened-menu) {
+        overflow: hidden;
+    }
 }
 .wrapper {
     min-height: 100%;
