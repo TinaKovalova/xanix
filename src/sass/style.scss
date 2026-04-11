@@ -13,6 +13,7 @@ html {
 body {
     font-family: "Outfit", sans-serif;
     color: #ffffff;
+    line-height: 1.2;
     background-color: #000000;
     &:has(.opened-menu) {
         overflow: hidden;

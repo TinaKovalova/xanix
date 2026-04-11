@@ -97,13 +97,32 @@
         padding-inline: 40px;
         padding-block-start: 10px;
     }
+
     // .menu__link
 
     &__link {
         transition: color 0.3s;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            inset-block-start: 100%;
+            inset-inline-start: 0;
+            height: 2px;
+            width: 0%;
+            background-color: #ffffff;
+            transition:
+                width 0.3s,
+                background-color 0.3s;
+        }
+
         @media (any-hover: hover) {
             &:hover {
                 color: $accent;
+                &::after {
+                    width: 100%;
+                    background-color: $accent;
+                }
             }
         }
     }
