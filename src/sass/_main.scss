@@ -279,10 +279,6 @@
     @media (min-width: 1200px) {
         padding-block: 80px;
     }
-    // .works__container
-
-    &__container {
-    }
 
     // .works__header
 
@@ -325,8 +321,6 @@
             @media (min-width: 1200px) {
                 padding-block: 64px;
             }
-        }
-        .swiper-wrapper {
         }
         .swiper-slide {
             @media (min-width: 1440px) {
@@ -436,12 +430,6 @@
             }
         }
     }
-
-    // .work-card__title
-
-    &__title {
-    }
-
     // .work-card__title-link
 
     &__title-link {
@@ -452,6 +440,171 @@
             &:hover {
                 color: $accent;
             }
+        }
+    }
+}
+
+.pricing {
+    padding-block: 50px;
+    @media (min-width: 1200px) {
+        padding-block: 80px;
+    }
+
+    // .pricing__title
+
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: 35px;
+        }
+        &::before {
+            mask-image: url("/src/img/icons/hot-price.svg");
+        }
+        @media (min-width: 1200px) {
+            &:not(:last-child) {
+                margin-bottom: 64px;
+            }
+        }
+    }
+
+    // .pricing__options
+
+    &__options {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        gap: 24px;
+        @media (max-width: $tablet) {
+            gap: 10px;
+        }
+        @media (max-width: $mobile) {
+            grid-template-columns: 1fr;
+        }
+        & .pricing-card {
+            flex-grow: 1;
+        }
+    }
+}
+
+.pricing-card {
+    border: 2px solid rgba(255, 255, 255, 0.16);
+    border-radius: 24px;
+    padding: 8px;
+    transition: border-color 0.3s;
+
+    // .pricing-card__basic-info
+
+    &__basic-info {
+        padding-inline: 24px;
+        padding-block: 24px;
+        border-radius: 16px;
+        background-color: rgba(135, 41, 255, 0.24);
+        position: relative;
+        & > *:not(:last-child) {
+            margin-bottom: 24px;
+        }
+        &:has(.pricing-card__label) {
+            background: linear-gradient(219deg, #8729ff 0%, #511999 100%);
+        }
+    }
+    @media (any-hover: hover) {
+        &:hover {
+            border-color: $accent;
+        }
+    }
+
+    // .pricing-card__title
+
+    &__title {
+        font-weight: 700;
+        font-size: 24px;
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
+    // .pricing-card__description
+
+    &__description {
+        line-height: 1.5;
+    }
+
+    // .pricing-card__price
+
+    &__price {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 4px;
+    }
+
+    // .pricing-card__price-numbers
+
+    &__price-numbers {
+        font-weight: 600;
+        font-size: 48px;
+    }
+
+    // .pricing-card__billing-interval
+
+    &__billing-interval {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    &__button {
+        width: 100%;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.43;
+    }
+
+    // .pricing-card__label
+
+    &__label {
+        position: absolute;
+        inset-inline-end: 24px;
+        inset-block-start: 24px;
+        padding-inline: 8px;
+        padding-block: 2px;
+        border-radius: 999px;
+        background: $text;
+        color: #8729ff;
+        font-size: 12px;
+        line-height: 1.33;
+        letter-spacing: 0.04em;
+    }
+
+    // .pricing-card__details
+
+    &__details {
+        padding-inline: 16px;
+        padding-block: 16px;
+    }
+}
+
+.price-details {
+    // .price-details__list
+
+    &__list {
+        line-height: 1.5;
+        color: $text-64;
+        & > *:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    }
+
+    // .price-details__item
+
+    &__item {
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+        &::before {
+            flex-shrink: 0;
+            content: "";
+            width: 1em;
+            height: 1em;
+            background-color: currentColor;
+            mask: url("/src/img/icons/star.svg") center/contain no-repeat;
         }
     }
 }
