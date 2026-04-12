@@ -1,4 +1,5 @@
-
+import Swiper from "swiper";
+import "swiper/css";
 window.addEventListener("load", () => {
   const burgerButton = document.querySelector(".burger-btn");
   const header = document.querySelector(".header");
@@ -15,7 +16,6 @@ window.addEventListener("load", () => {
   });
 
   //SCROLLER
-  //---Scrolller-----------------------
   const clientsScroller = document.querySelector(".clients__scroller");
   const scrollerList = clientsScroller?.querySelector(".clients__list");
   const scrollerListContent = [...scrollerList.children];
@@ -36,6 +36,40 @@ window.addEventListener("load", () => {
   const totalWidth = scrollerList.scrollWidth / 2;
   const animationSpeed = scrollerList.dataset.speed || 60;
   const duration = Math.floor(totalWidth / animationSpeed);
-  scrollerList.style.animationDuration = `${duration}s`;
+    scrollerList.style.animationDuration = `${duration}s`;
     
+
+
+const worksSwiper = new Swiper(".works__slider.swiper", {
+  //   loop: true,
+  //   slidesPerView: 1,
+  //   spaceBetween: 10,
+  speed: 2000,
+  grabCursor: true,
+  breakpoints: {
+    320: {
+      slidesPerView: 1.5,
+      spaceBetween: 10,
+    },
+    450: {
+      slidesPerView: 2.3,
+      spaceBetween: 10,
+    },
+    640: {
+      slidesPerView: 3.1,
+      spaceBetween: 15,
+    },
+
+    992: {
+      slidesPerView: 3.4,
+      spaceBetween: 24,
+    },
+    1441: {
+      //   loop: true,
+      slidesPerView: "auto",
+      spaceBetween: 24,
+      centerInsufficientSlides: true,
+    },
+  },
+});
 });

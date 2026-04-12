@@ -12,7 +12,7 @@ html {
 
 body {
     font-family: "Outfit", sans-serif;
-    color: #ffffff;
+    color: $text;
     line-height: 1.2;
     background-color: #000000;
     &:has(.opened-menu) {

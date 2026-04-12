@@ -110,7 +110,7 @@
             inset-inline-start: 0;
             height: 2px;
             width: 0%;
-            background-color: #ffffff;
+            background-color: $text;
             transition:
                 width 0.3s,
                 background-color 0.3s;
@@ -146,7 +146,7 @@
         span {
             width: 80%;
             height: 3px;
-            background-color: #ffffff;
+            background-color: $text;
             border-radius: 5px;
         }
     }
@@ -156,7 +156,7 @@
     border-radius: 8px;
     padding-block: 16px;
     padding-inline: 32px;
-    background-color: #ffffff;
+    background-color: $text;
     color: #000000;
     display: flex;
     align-items: center;
@@ -180,7 +180,7 @@
     }
     @media (any-hover: hover) {
         &:hover::after {
-            transform: rotate(45deg) translate(5px, -5px);
+            transform: translate(2px, -2px);
         }
     }
 }
