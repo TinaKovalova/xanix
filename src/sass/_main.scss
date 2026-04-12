@@ -86,3 +86,49 @@
         }
     }
 }
+.clients {
+    // .clients__list
+    padding-block: 10px;
+    @media (min-width: $tablet) {
+        padding-block: 32px;
+    }
+    // .clients__list
+    @keyframes running-line {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(calc(-50%));
+        }
+    }
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 30px;
+        width: min-content;
+        will-change: transform;
+        animation: running-line linear forwards infinite;
+
+        @media (min-width: $tablet) {
+            column-gap: 85px;
+            padding-block: 4px;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                animation-play-state: paused;
+            }
+        }
+    }
+
+    // .clients__item
+
+    &__item {
+        display: flex;
+        align-items: center;
+    }
+    &__image {
+        height: 24px;
+        object-fit: contain;
+    }
+}
