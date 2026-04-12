@@ -264,6 +264,18 @@
 
 .works {
     padding-block: 50px;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        inset-inline-end: 0;
+        inset-block-start: -187px;
+        width: 150.83vw;
+        aspect-ratio: 2172/ 2858;
+        transform: translateX(25.42vw);
+        background: url("/src/img/bg-decor.svg") center/contain no-repeat;
+        filter: blur(200px);
+    }
     @media (min-width: 1200px) {
         padding-block: 80px;
     }

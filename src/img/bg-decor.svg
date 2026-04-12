@@ -1,16 +1,19 @@
-<svg width="1440" height="3775" viewBox="0 0 1440 3775" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g opacity="0.72" filter="url(#filter0_f_6002_623)">
-<path d="M1805.5 417.127C1708.5 975.126 925 1044.13 995.5 1790.63C1118.73 3095.49 -75 3403.13 -366 3230.63" stroke="url(#paint0_linear_6002_623)" stroke-width="200"/>
-</g>
-<defs>
-<filter id="filter0_f_6002_623" x="-816.992" y="0" width="3121.01" height="3774.47" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="200" result="effect1_foregroundBlur_6002_623"/>
-</filter>
-<linearGradient id="paint0_linear_6002_623" x1="1696.6" y1="417.127" x2="-114.157" y2="1453.97" gradientUnits="userSpaceOnUse">
-<stop stop-color="#8729FF"/>
-<stop offset="1" stop-color="#511999"/>
-</linearGradient>
-</defs>
+<svg viewBox="0 0 3121.01 3774.48" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="3121.014893" height="3774.480713" fill="none" customFrame="#000000">
+	<defs>
+		<g id="pixso_custom_effect_0">
+			<effect visibility="visible" effectType="gaussianBlur" stdDeviation="400" />
+		</g>
+		<filter id="filter_0" width="3121.014893" height="3774.480713" x="0.000000" y="0.000000" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_0)" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix" />
+			<feBlend result="shape" in="SourceGraphic" in2="BackgroundImageFix" mode="normal" />
+			<feGaussianBlur stdDeviation="133.333328" result="effect_layerBlur_1" />
+		</filter>
+		<linearGradient id="paint_linear_0" x1="2513.59741" x2="702.835449" y1="417.126831" y2="1453.97351" gradientUnits="userSpaceOnUse">
+			<stop stop-color="rgb(135,41,255)" offset="0" stop-opacity="1" />
+			<stop stop-color="rgb(81,24.6,153)" offset="1" stop-opacity="1" />
+		</linearGradient>
+	</defs>
+	<g opacity="0.720000029" filter="url(#filter_0)">
+		<path id="Vector" d="M2622.49 417.127C2525.49 975.126 1741.99 1044.13 1812.49 1790.63C1935.73 3095.49 741.992 3403.13 450.992 3230.63" stroke="url(#paint_linear_0)" stroke-width="200.000000" />
+	</g>
 </svg>
