@@ -64,12 +64,19 @@ const worksSwiper = new Swiper(".works__slider.swiper", {
       slidesPerView: 3.4,
       spaceBetween: 24,
     },
-    1441: {
+    1440: {
       //   loop: true,
       slidesPerView: "auto",
       spaceBetween: 24,
       centerInsufficientSlides: true,
     },
   },
+});
+const testimonialsSwiper = new Swiper(".testimonials__slider.swiper", {
+  slidesPerView: "auto",
+  spaceBetween: 24,
+  centerInsufficientSlides: true,
+  speed: 2000,
+  grabCursor: true,
 });
 });
