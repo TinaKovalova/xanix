@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "mixins" as *;
 .hero {
     // height: 100vh;
     overflow-y: auto;
@@ -136,19 +137,18 @@
     }
 }
 .services {
+    @include section-padding;
     // .services__container
 
     &__container {
-        padding-block: 50px;
         display: flex;
-        gap: 40px;
+        gap: 20px 40px;
 
         @media (max-width: $tablet) {
             flex-wrap: wrap;
-            row-gap: 20px;
         }
-        @media (min-width: 1200px) {
-            padding-block: 80px;
+        @media (min-width: 992px) {
+            gap: 40px;
         }
     }
 
@@ -220,7 +220,7 @@
         flex-grow: 1;
         font-weight: 600;
         font-size: 60px;
-        font-size: clamp(26px, 4.16vw, 60px);
+        font-size: clamp(22px, 4.16vw, 60px);
         text-transform: capitalize;
         display: flex;
         align-items: center;
@@ -263,7 +263,7 @@
 }
 
 .works {
-    padding-block: 50px;
+    @include section-padding;
     position: relative;
     &::after {
         content: "";
@@ -275,9 +275,6 @@
         transform: translateX(25.42vw);
         background: url("/src/img/bg-decor.svg") center/contain no-repeat;
         filter: blur(200px);
-    }
-    @media (min-width: 1200px) {
-        padding-block: 80px;
     }
 
     // .works__header
@@ -445,10 +442,7 @@
 }
 
 .pricing {
-    padding-block: 50px;
-    @media (min-width: 1200px) {
-        padding-block: 80px;
-    }
+    @include section-padding;
 
     // .pricing__title
 
@@ -610,12 +604,7 @@
 }
 
 .testimonials {
-    // .testimonials__container
-    padding-block: 50px;
-
-    @media (min-width: 1200px) {
-        padding-block: 80px;
-    }
+    @include section-padding;
 
     &__container {
         &:not(:last-child) {
@@ -777,6 +766,118 @@
 
     &__author-position {
         font-size: 14px;
+        color: $text-64;
+    }
+}
+
+.faqs {
+    padding-block: 50px;
+    @media (min-width: 1200px) {
+        padding-block: 80px;
+    }
+
+    // .faqs__container
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px 40px;
+
+        @media (max-width: $tablet) {
+            flex-wrap: wrap;
+        }
+        @media (min-width: 992px) {
+            gap: 40px;
+        }
+    }
+
+    // .faqs__title
+
+    &__title {
+        &::before {
+            mask-image: url("/src/img/icons/help-circle.svg");
+        }
+    }
+
+    // .faqs__details-wrapper
+
+    &__details-wrapper {
+        flex-basis: 845px;
+        @media (max-width: $tablet) {
+            flex-grow: 1;
+        }
+    }
+
+    // .faqs__details
+
+    &__details {
+        padding-block: 24px;
+        border-bottom: 1.5px solid rgba(255, 255, 255, 0.32);
+        &[open] .faqs__details-summary {
+            margin-bottom: 24px;
+        }
+    }
+    &__details-summary {
+        font-weight: 700;
+        font-size: 20px;
+        display: flex;
+        column-gap: 15px;
+        cursor: pointer;
+        list-style: none;
+        &::-webkit-details-marker {
+            display: none;
+        }
+        @media (min-width: 992px) {
+            font-size: 24px;
+        }
+    }
+    &__details-marker {
+        flex-shrink: 0;
+        margin-left: auto;
+        display: inline-block;
+        width: 1.33em;
+        height: 1.33em;
+        border-radius: 50%;
+        border: 1px solid $accent;
+        color: $accent;
+        position: relative;
+        &::after,
+        &::before {
+            content: "";
+            width: 0.54em;
+            height: 1px;
+            background-color: currentColor;
+            position: absolute;
+            inset-inline-start: 50%;
+            inset-block-start: 50%;
+            translate: -50% -50%;
+            will-change: width, opacity, rotate;
+            transition:
+                width 0.3s,
+                opacity 0.4s,
+                rotate 0.3s;
+        }
+        &::before {
+            rotate: 0;
+        }
+        &::after {
+            translate: calc(-50% - 0.5px) -50%;
+            rotate: 90deg;
+            opacity: 1;
+            width: 0;
+        }
+    }
+    [open] .faqs__details-marker::before {
+        rotate: -90deg;
+        opacity: 1;
+    }
+    [open] .faqs__details-marker::after {
+        width: 0.54em;
+        opacity: 1;
+        rotate: -180deg;
+    }
+    &__details-content {
+        line-height: 1.5;
         color: $text-64;
     }
 }

@@ -1,0 +1,6 @@
+@mixin section-padding {
+    padding-block: 50px;
+    @media (min-width: 1200px) {
+        padding-block: 80px;
+    }
+}
