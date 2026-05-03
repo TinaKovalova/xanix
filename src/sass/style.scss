@@ -5,6 +5,9 @@
 @use "header";
 @use "main";
 @use "footer";
+// :root {
+//     interpolate-size: allow-keywords;
+// }
 
 html {
     scroll-behavior: smooth;
