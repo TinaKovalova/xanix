@@ -904,7 +904,7 @@
         backdrop-filter: blur(35px);
         background: rgba(135, 41, 255, 0.24);
         padding-block: 48px;
-        padding-inline: 15px;
+        padding-inline: 10px;
         display: flex;
         flex-direction: column;
         row-gap: 32px;
@@ -984,5 +984,8 @@
     // .collaboration__button
 
     &__button {
+        @media (max-width: 767.98px) {
+            flex-grow: 1;
+        }
     }
 }
