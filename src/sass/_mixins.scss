@@ -1,6 +1,33 @@
+@use "variables" as *;
 @mixin section-padding {
     padding-block: 30px;
     @media (min-width: 1200px) {
         padding-block: 80px;
+    }
+}
+@mixin menu-item-hover {
+    transition: color 0.3s;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        inset-block-start: 100%;
+        inset-inline-start: 0;
+        height: 2px;
+        width: 0%;
+        background-color: $text;
+        transition:
+            width 0.3s,
+            background-color 0.3s;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            color: $accent;
+            &::after {
+                width: 100%;
+                background-color: $accent;
+            }
+        }
     }
 }
