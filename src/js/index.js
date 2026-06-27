@@ -14,6 +14,14 @@ window.addEventListener("load", () => {
       header.classList.remove("opened-menu");
     }
   });
+  window.addEventListener("scroll", () => {
+    const headerHeigth = parseInt(getComputedStyle(header).height);
+    if (window.scrollY > headerHeigth / 2) {
+      header.classList.add("header--blur");
+    } else {
+      header.classList.remove("header--blur");
+    }
+  });
 
   //SCROLLER
   const clientsScroller = document.querySelector(".clients__scroller");

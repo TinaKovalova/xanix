@@ -92,11 +92,6 @@
             flex-grow: 1;
         }
     }
-
-    // .footer__copyright-menu
-
-    &__copyright-menu {
-    }
 }
 .menu-footer {
     display: flex;
@@ -144,17 +139,15 @@
     &__contacts-link {
         @include menu-item-hover;
     }
-
-    // .menu-footer__contacts
-
-    &__contacts {
-    }
+   
     //__contacts-item
     &__contacts-item {
         text-wrap: balance;
     }
-    // menu-footer__contacts-link
-    &__contacts-link {
+   }
+.menu-column {
+    &__item-title {
+        @extend .menu-footer__item-title;
     }
 }
 .socials {

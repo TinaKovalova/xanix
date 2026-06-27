@@ -17,16 +17,16 @@
                 <nav class="nav">
                     <ul class="nav__list menu">
                         <li class="menu__item">
-                            <a href="#" class="menu__link">Works</a>
+                            <a href="#works" class="menu__link">Works</a>
                         </li>
                         <li class="menu__item">
-                            <a href="#" class="menu__link">About</a>
+                            <a href="#about" class="menu__link">About</a>
                         </li>
                         <li class="menu__item">
-                            <a href="#" class="menu__link">Contact</a>
+                            <a href="#contact" class="menu__link">Contact</a>
                         </li>
                         <li class="menu__item">
-                            <a href="#" class="menu__link">Blog</a>
+                            <a href="#blog" class="menu__link">Blog</a>
                         </li>
                     </ul>
                 </nav>
@@ -79,7 +79,7 @@
                     </ul>
                 </div>
             </div>
-            <section class="services">
+            <section class="services" id="about">
                 <div class="services__container">
                     <h2 class="services__title section-title section-title--sticky">
                         We offer a wide range of design services
@@ -100,7 +100,7 @@
                     </ul>
                 </div>
             </section>
-            <section class="works">
+            <section class="works" id="works">
                 <div class="works__container">
                     <div class="works__header">
                         <h2 class="works__title section-title">
@@ -172,7 +172,7 @@
 
                     <div class="works__actions">
                         <div class="works__actions-text">Are you impressed with what you've seen so far?</div>
-                        <a href="#" class="button button--icon">See all works</a>
+                        <a href="#" class="button button--icon" target="_blank">See all works</a>
                     </div>
                 </div>
             </section>
@@ -280,7 +280,7 @@
                     </div>
                 </div>
             </section>
-            <section class="testimonials">
+            <section class="testimonials" id="blog">
                 <div class="testimonials__container">
                     <h2 class="testimonials__title section-title">
                         Testimonials
@@ -445,11 +445,12 @@
                                 What services does Xanix provide?
                                 <span class="faqs__details-marker"></span>
                             </summary>
-                            <div class="faqs__details-content"></div>
-                            <p>
-                                Xanix offers a range of digital services including web design, development, digital
-                                marketing, branding, and more.
-                            </p>
+                            <div class="faqs__details-content">
+                                <p>
+                                    Xanix offers a range of digital services including web design, development, digital
+                                    marketing, branding, and more.
+                                </p>
+                            </div>
                         </details>
                         <details class="faqs__details" name="faq">
                             <summary class="faqs__details-summary">
@@ -502,7 +503,7 @@
                     </div>
                 </div>
             </section>
-            <section class="collaboration">
+            <section class="collaboration" id="contact">
                 <div class="collaboration__container">
                     <div class="collaboration__content-wrapper">
                         <div class="collaboration__content">
@@ -510,9 +511,9 @@
                                 <span></span>
                                 Available for new project
                             </div>
-                            <div class="collaboration__title">
+                            <h2 class="collaboration__title">
                                 Interested in working together?
-                            </div>
+                            </h2>
                             <div class="collaboration__text">
                                 Yes, indeed. Improving underperforming sales teams is our specialty. We can help them
                                 elevate their performance levels and eliminate inconsistencies, resulting in increased
@@ -534,7 +535,7 @@
         </main>
         <footer class="footer">
             <div class="footer__background">
-                <img src="/src/img/footer-bg.png" aria-hidden="true" class="footer__background-image">
+                <img src="/src/img/footer-bg.png" aria-hidden="true" alt="" class="footer__background-image">
             </div>
             <div class="footer__container">
                 <div class="footer__menu-row">
@@ -596,9 +597,9 @@
                             </address>
                         </li>
                     </ul>
-                    <div class="footer__menu-column">
-                        <div class="menu-footer__item-title">Socials</div>
-                        <ul class="menu-footer__socials-menu socials">
+                    <div class="footer__menu-column menu-column">
+                        <div class="menu-column__item-title">Socials</div>
+                        <ul class="menu-column__socials-menu socials">
                             <li class="socials__item">
                                 <a href="#" class="socials__link socials__link--instagram" target="_blank"></a>
                             </li>

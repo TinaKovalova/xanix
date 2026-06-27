@@ -169,6 +169,7 @@
 
     &__list {
         flex-grow: 1;
+        width: 64.7656%;
         counter-reset: service-counter;
         & > *:not(:last-child) {
             margin-bottom: 20px;
@@ -181,12 +182,13 @@
             position: relative;
             &::after {
                 content: "";
-                width: 41.5%;
+                font-size: 0;
+                width: 344px;
                 aspect-ratio: 1 / 1;
                 position: absolute;
                 z-index: -1;
-                inset-inline-end: 10.97vw;
-                inset-block-start: -68px;
+                inset-inline-end: min(10.7vw, 140px);
+                inset-block-start: max(-4.79vw, -69px);
                 transform: rotate(10deg);
                 background: url("/src/img/services/bg-decor-rectangle.png") center/contain no-repeat;
                 opacity: 0.5;
@@ -634,8 +636,6 @@
     // .testimonials__slider
 
     &__slider.swiper {
-        & .swiper-wrapper {
-        }
         & .swiper-slide {
             width: 280px;
             display: flex;
@@ -687,9 +687,6 @@
     @media (min-width: 768px) {
         padding-inline: 24px;
         padding-block: 24px;
-    }
-    // .testimonial__rate
-    &__rate {
     }
 
     // .testimonial__rate-icon
@@ -820,12 +817,6 @@
         &[open] .faqs__details-summary {
             margin-bottom: 24px;
         }
-        //  &::details-content {
-        //     transition:
-        //         height 0.3s ease,
-        //         content-visibility 0.3s ease;
-        //    transition-behavior: allow-discrete;
-        // }
     }
     &__details-summary {
         font-weight: 700;
@@ -890,14 +881,23 @@
         line-height: 1.5;
         color: $text-64;
     }
+    &::details-content {
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        transition:
+            opacity 0.4s ease,
+            height 0.4s ease,
+            content-visibility 0.4s allow-discrete;
+        transition-behavior: allow-discrete;
+    }
+    &[open]::details-content {
+        opacity: 1;
+        height: auto;
+    }
 }
 .collaboration {
     @include section-padding;
-    // .collaboration__container
-
-    &__container {
-    }
-
     //collaboration__content-wrapper
     &__content-wrapper {
         border-radius: 32px;
