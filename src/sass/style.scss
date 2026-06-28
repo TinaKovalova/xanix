@@ -11,6 +11,7 @@
 
 html {
     scroll-behavior: smooth;
+    scrollbar-gutter: stable;
 }
 
 body {
@@ -30,6 +31,12 @@ body {
 }
 .wrapper > main {
     flex-grow: 1;
+}
+.main > * {
+    scroll-margin-top: 52px;
+    @media (min-width: 992px) {
+        scroll-margin-top: 82px;
+    }
 }
 [class*="__container"] {
     max-width: 1300px; //1280px

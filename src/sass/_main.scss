@@ -228,7 +228,9 @@
         text-transform: capitalize;
         display: flex;
         align-items: center;
+        justify-content: space-between;
         gap: inherit;
+        transition: color 0.3s ease;
         &::after {
             content: "";
             width: 0.67em;
@@ -236,12 +238,14 @@
             background: $text;
             mask: url("/src/img/icons/arrow.svg") center/contain no-repeat;
             transition: background 0.3s ease;
-            margin-left: auto;
             flex-shrink: 0;
         }
         @media (any-hover: hover) {
-            &:hover::after {
-                background: linear-gradient(rgba(135, 41, 255, 1), rgba(81, 25, 153, 1));
+            &:hover {
+                color: $accent;
+                &::after {
+                    background: linear-gradient(rgba(135, 41, 255, 1), rgba(81, 25, 153, 1));
+                }
             }
         }
     }
@@ -263,10 +267,10 @@
     }
     @media (min-width: 992px) {
         font-size: 32px;
-    }
-    &.section-title--sticky {
-        position: sticky;
-        top: 80px;
+        &.section-title--sticky {
+            position: sticky;
+            top: 80px;
+        }
     }
 }
 
@@ -276,6 +280,7 @@
     &::after {
         content: "";
         position: absolute;
+        z-index: -1;
         inset-inline-end: 0;
         inset-block-start: -187px;
         width: 150.83vw;
